@@ -1,5 +1,5 @@
 import {Router} from 'express';
-import {getAlojamientos, createAlojamiento, updateAlojamiento, deleteAlojamiento, getAlojamiento, getTiposdeAlojamientos, createTiposdeAlojamiento, updateTiposdeAlojamiento, deleteTiposdeAlojamiento, getServicios, createServicio} from '../controllers/alojamientos.controller.js';
+import {getAlojamientos, createAlojamiento, updateAlojamiento, deleteAlojamiento, getAlojamiento, getTiposdeAlojamientos, createTiposdeAlojamiento, updateTiposdeAlojamiento, deleteTiposdeAlojamiento, getServicios, createServicio, updateServicio, deleteServicio} from '../controllers/alojamientos.controller.js';
 
 
 const router = Router()
@@ -21,7 +21,7 @@ router.delete('/TiposdeAlojamiento/:idTipoAlojamiento', deleteTiposdeAlojamiento
 // tabla Servicios
 router.get('/Servicios', getServicios)
 router.post('/Servicios', createServicio)
-//router.put('/Servicios/:idServicio', updateServicio)
-//router.delete('/Servicios/:idServicio', deleteServicio)
+router.put('/Servicios/:idServicio', updateServicio)
+router.delete('/Servicios/:idServicio', deleteServicio)
 
 export default router
